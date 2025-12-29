@@ -11,7 +11,6 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #0f172a;
       color: #e5e7eb;
-      line-height: 1.6;
     }
 
     header {
@@ -20,15 +19,18 @@
       background: linear-gradient(135deg, #2563eb, #1e40af);
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #e5e7eb;
+      object-fit: cover;
+      margin-bottom: 20px;
     }
 
-    header p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
+    header h1 {
+      font-size: 3rem;
+      margin: 10px 0;
     }
 
     section {
@@ -39,29 +41,33 @@
 
     h2 {
       font-size: 2rem;
-      margin-bottom: 20px;
       border-bottom: 2px solid #2563eb;
       display: inline-block;
       padding-bottom: 5px;
     }
 
-    .skills, .projects {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       margin-top: 30px;
     }
 
     .card {
       background: #020617;
-      padding: 20px;
       border-radius: 12px;
       border: 1px solid #1e293b;
+      overflow: hidden;
     }
 
-    .card h3 {
-      margin-top: 0;
-      color: #60a5fa;
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
     }
 
     footer {
@@ -75,69 +81,51 @@
       color: #60a5fa;
       text-decoration: none;
     }
-
-    a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
 
   <!-- HERO -->
   <header>
+    <img src="images/profile.jpg" alt="Farjad" class="profile-pic" />
     <h1>Farjad</h1>
-    <p>
-      AI & Machine Learning Engineer • RAG Applications • Data & NLP Solutions
-    </p>
+    <p>AI & Machine Learning Engineer | RAG Applications | NLP</p>
   </header>
 
   <!-- ABOUT -->
   <section>
     <h2>About Me</h2>
     <p>
-      I am an AI/ML Engineer with hands-on experience building end-to-end
-      Retrieval-Augmented Generation (RAG) applications, data pipelines,
-      and intelligent systems using modern AI tools and frameworks.
+      AI/ML Engineer with experience building end-to-end RAG systems,
+      data pipelines, and intelligent applications using modern LLM stacks.
     </p>
-  </section>
-
-  <!-- SKILLS -->
-  <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="card">
-        <h3>AI & ML</h3>
-        <p>Machine Learning, Deep Learning, NLP, LLMs, RAG</p>
-      </div>
-      <div class="card">
-        <h3>Tools</h3>
-        <p>Python, Pandas, NumPy, LangChain, Vector Databases</p>
-      </div>
-      <div class="card">
-        <h3>Data</h3>
-        <p>Web Scraping, APIs, Data Annotation, ETL Pipelines</p>
-      </div>
-    </div>
   </section>
 
   <!-- PROJECTS -->
   <section>
     <h2>Projects</h2>
-    <div class="projects">
+
+    <div class="grid">
       <div class="card">
-        <h3>RAG Document Assistant</h3>
-        <p>
-          Built an end-to-end RAG system that answers questions from uploaded
-          documents using embeddings and vector search.
-        </p>
+        <img src="images/project1.png" alt="RAG App" />
+        <div class="card-content">
+          <h3>RAG Document Assistant</h3>
+          <p>
+            Question-answering system over documents using embeddings and
+            vector databases.
+          </p>
+        </div>
       </div>
 
       <div class="card">
-        <h3>Social Media Data Analyzer</h3>
-        <p>
-          Collected and analyzed Twitter/X data including replies,
-          retweets, and user metadata for insights.
-        </p>
+        <img src="images/project2.png" alt="Data Scraper" />
+        <div class="card-content">
+          <h3>Social Media Data Analyzer</h3>
+          <p>
+            Scraped and analyzed Twitter/X data including replies,
+            retweets, and user metadata.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -146,14 +134,14 @@
   <section>
     <h2>Contact</h2>
     <p>
-      📧 Email: <a href="mailto:your@email.com">your@email.com</a><br />
-      💼 LinkedIn: <a href="#">linkedin.com/in/yourprofile</a><br />
-      💻 GitHub: <a href="#">github.com/yourusername</a>
+      📧 <a href="mailto:your@email.com">your@email.com</a><br />
+      💼 <a href="#">LinkedIn</a><br />
+      💻 <a href="#">GitHub</a>
     </p>
   </section>
 
   <footer>
-    <p>© 2025 Farjad — Built with GitHub Pages</p>
+    © 2025 Farjad • GitHub Pages
   </footer>
 
 </body>
